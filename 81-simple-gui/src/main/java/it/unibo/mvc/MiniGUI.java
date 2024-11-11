@@ -49,7 +49,7 @@ public class MiniGUI {
         write.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                System.out.println(randomGenerator.nextInt());
+                tetx.setText(Integer.toString(randomGenerator.nextInt()));
             }
         });
     }
