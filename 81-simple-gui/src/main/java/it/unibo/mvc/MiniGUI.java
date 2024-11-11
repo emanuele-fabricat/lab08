@@ -3,10 +3,13 @@ package it.unibo.mvc;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Label;
+import java.awt.TextField;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,6 +27,7 @@ public class MiniGUI {
     private static final int PROPORTION = 5;
     private final Random randomGenerator = new Random();
     private final JFrame frame = new JFrame(TITLE);
+    private final Label tetx = new Label("Result", Label.CENTER);
 
     /**
      * Creates a new {@link MiniGUI}.
@@ -35,6 +39,7 @@ public class MiniGUI {
         canvas1.setLayout(new BoxLayout(canvas1, BoxLayout.X_AXIS));
         final JButton write = new JButton("Print a random number on standard output");
         canvas.add(canvas1, BorderLayout.CENTER);
+        canvas.add(tetx, BorderLayout.NORTH);
         canvas1.add(write);
         frame.setContentPane(canvas);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
