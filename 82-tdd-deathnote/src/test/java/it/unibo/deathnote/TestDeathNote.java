@@ -86,7 +86,7 @@ class TestDeathNote {
         try {
             diary.writeDetails("");
             Assertions.fail("Wrote the details before write the name");
-        } catch (IllegalStateException e) {
+        } catch (IllegalArgumentException e) {
             assertFalse(e.getMessage().isBlank());
             assertNotNull(e.getMessage());
         }
